@@ -16,16 +16,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use(cors)({
-    origin: 'https://vercel.com/satyams-projects-5fd06e32',
-    methods: ['GET', 'POST'],
-    credentials: true
-})
-
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-})
-
 // Set view engine and static files
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../Frontend'));
